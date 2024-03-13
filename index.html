@@ -1,0 +1,460 @@
+<html lang="en">
+    <meta charset="UTF-8">
+    <head>
+        <meta nema="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+            *{
+                padding:0;
+                margin:0;
+                box-sizing:border-box;
+                font-family: sans-serif;
+                scroll-behavior: smooth;
+            }
+            .con{
+                display:flex;
+                justify-content: space-between;
+                align-items:center;
+                background: black;
+                box-shadow:0 0 30px black;
+                position:sticky;
+                top:0;
+                padding:10px 0;
+                box-shadow:0 -8px 32px 0 rgba(237, 236, 236, 0.5);          
+             }
+            nav ul{
+                list-style-type: none;
+            }
+            nav ul li{
+                display: inline-block;
+                padding:5px 5px;
+                margin:5px 10px;
+            }
+            nav ul li a{
+                text-decoration:none;
+                color:white;
+                margin:10px 30px;
+                font-size:25px; 
+                transition:0.5s;
+            }
+            nav ul li a:hover{
+                    color:red;
+            }
+            .con h1{
+                color:white;
+                margin:0 5%;
+            }
+            h1 span{
+                color:red;
+            }
+            .header{
+                background: black;
+                width:100%;
+                min-height:150vh;
+                border:1px solid;
+                flex-wrap:wrap;
+                align-content:flex-start;
+                box-sizing:border-box;
+            }
+            .main{
+                max-height:90vh;
+                box-sizing:border-box;
+                padding: 10px 10px;
+                width:90%;
+                height:500px;
+                margin:100px auto;
+                display:flex;
+                justify-content:space-between;
+                align-items:center;
+                background:red;
+                border-radius:20px;
+            }
+            .img{
+                box-sizing:border-box;
+                width:400px;
+                height:400px;
+                text-align:center;
+                margin-left:15%;
+            }
+            .col{
+                width:400px;
+                height:300px;
+                border-radius:20px;
+                margin:10px 15%;
+            }
+            .col h2{
+                text-align:center;
+                border-bottom:2px solid black;
+                color:white;
+            }
+            h2 span{
+                color:black;
+            }
+            p{
+                margin-top:40px;
+                color:white;
+                line-height: 30px;
+            }
+            .img img{
+                width:100%;
+                height:100%;
+                border-radius:20px;
+                box-shadow: 0 -8px 32px 0 rgba(0,0,0,0.5);
+            }
+            hr{
+                width:100px;
+                margin:auto;
+                height:2px;
+                border-radius:20%;
+            }
+            .h p{
+                width:30%;
+                margin:10px auto;
+                text-align:center;  
+                font-size:32px; 
+                color:white;
+                background: rgba(255, 255, 255, 0.163);
+                border-radius:40px;
+                font-style:italic;
+                padding:5px 2px;
+            }
+            .h p span{
+                color:red;
+            }
+            .con2{
+                width:70%;
+                margin:20px auto;
+                display:flex;
+                box-sizing:border-box;
+                flex-wrap:wrap;
+                align-content:center; 
+                justify-content: center;
+                
+            }
+            .box{
+                text-align: center;
+                width:300px;
+                height:380px;
+                margin:20px 20px;
+                transition:1s;
+            }
+            .box:hover{
+                border:1px solid red;
+                border-radius:20px;
+                box-shadow:0 -8px 32px 0 rgba(237, 236, 236, 0.5);
+            }
+            .box img{
+                margin-top:10px;
+                width:275px;
+                height:300px;
+                object-fit:cover;
+                aspect-ratio:3/3;
+                border-radius:20px;
+            }
+            .box p{
+                font-size:20px;
+                margin-top:-1px;
+            }
+            .fa-star,.fa-star-half-o,.fa-star-o{
+                color:#f33446;
+            }
+            .box p span{
+                color:red;
+            }
+            .con3{
+                display:flex;
+                width:70%;  
+                margin:20px auto;
+                text-align: center;
+                border-radius: 20px; 
+                box-sizing: border-box;
+                flex-wrap:wrap; 
+                align-content:center;
+                justify-content:center;   
+            }
+            .box1{
+                text-align: center;
+                width:300px;
+                height:380px;
+                margin:20px 20px;
+                transition:1s;   
+            }
+            .box1 img{
+                margin-top:10px;
+                width:275px;
+                height:300px;
+                object-fit:cover;
+                aspect-ratio:3/3;
+                border-radius:20px;
+            }
+            .box1:hover{
+                border:1px solid red;
+                border-radius:20px;
+                box-shadow:0 -8px 32px 0 rgba(233, 5, 5, 0.952);
+            }
+            .box1 p{
+                font-size:20px;
+                margin-top:5px;
+            }
+            .box1 span{
+                color:red;  
+            }
+            .input{
+                margin-top:-1%;
+                text-align:center;   
+            }
+            .btn{
+                padding:3px 40px;
+                color:white;
+                background: red;
+                transition:0.5s;
+                font-size:25px;
+            }
+            .btn:hover{
+                color:red;
+                text-shadow:0 0 5px black;
+                background: white;
+                border:1px solid red;
+                box-shadow:0 -8px 32px 0 rgba(237, 236, 236, 0.5);
+                border-radius:15px;
+            }
+            .con4{
+                background:black;
+                margin:10px auto;
+                width:90%;
+                flex-wrap:wrap;
+                align-content:center;
+                height:700px;
+                display:flex;
+                justify-content: space-between;
+                border-radius:20px;
+                
+            }
+            .video{
+                width:50%;
+                text-align:center;
+                transition:1s;
+                background: transparent;
+            }
+            .video:hover{
+                border:1px solid red;
+                border-radius:20px;
+                box-shadow:0 -8px 32px 0 rgba(237, 236, 236, 0.5);
+            }
+            .form{
+                text-align: center;
+                width: 30%;
+                height:300px;
+                margin-right:10%;
+                padding:20px 50px;
+                transition:1s;  
+                color:red;
+            }
+            .form:hover{
+                border:1px solid red;
+                border-radius:20px;
+                box-shadow:0 -8px 32px 0 rgba(237, 236, 236, 0.5);
+            }
+            .form input{
+                margin:10px 5px;
+                width:100%;
+                height:30px;
+                outline:none;
+                border:none;
+                background: transparent;
+                transition:0.5s;
+            }
+            .form input:hover{
+                color:red;
+                border-bottom:1px solid white;
+                border-radius:5px; 
+            }
+            .btn2 span{
+                color:red;
+            }
+            h3{
+                color:white;
+                border-bottom:1px solid white;
+                margin-bottom:20px;
+                line-height:25px;
+            }
+            h3 span{
+                color:red;
+            }
+            .btn2{
+                padding:10px 40px;
+                font-size:20px;
+                transition:1.5s;
+            }
+            .btn2:hover{
+                border:1px solid red;
+                border-radius:10px;
+                box-shadow:0 -8px 20px 0 rgba(233, 5, 5, 0.952);
+            }
+            .hred{
+                width:80%;
+                border-radius:10px;
+            }
+            .row{
+                text-align: center; 
+            }
+            .fot{
+                margin-top:-1px;
+                color:rgb(91, 84, 84);
+            }
+            .fot span{
+                color:red;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="con">
+            <h1>Ani<span>me</span></h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#id">Anime's</a></li>
+                    <li><a href="#con3">About</a></li>
+                    <li><a href="#con4">Contact Us</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="header">
+            <div class="main">
+            <div class="img">
+                <img src="1.jpg">
+            </div>
+                <div class="col">
+                    <h2>Welcome to<br> <span>Anime World</span></h2>
+                        <p> The word anime pronounced "ah-knee-may" is an abbreviation of the word animation.<br>
+                            In Japan, the word is used to refer to all animation. However, outside of Japan,<br>
+                            it has become the catch-all term for animation from Japan.</p>
+                    </div>
+            </div>
+            <!--------differnt anime series--------->
+            <section id="id">
+            <div class="h"><p>Top Rated <span>Animes.</span></p> </div>
+            <hr color="white">
+            <div class="con2">
+                    <div class="box">
+                        <img src="4.jpg">
+                        <p><span>Dragon</span> Ball Z</p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        
+                    </div>
+                    <div class="box">
+                        <img src="6.jpg">
+                        <p><span>Naruto</span> Shipudan</p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        
+                    </div>
+                    <div class="box">
+                        <img src="7.jpg">
+                        <p><span>One</span>Piece</p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-half-o"></i>
+                        
+                    </div>
+                    <div class="box">
+                        <img src="5.jpg">
+                        <p><span>Jujutsu</span> kaisen</p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        
+                    </div>
+                    <div class="box">
+                        <img src="10.jpg">
+                        <p><span>Demon</span> Slayer</p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>
+                        
+                    </div>
+                    <div class="box">
+                        <img src="9.jpg">
+                        <p><span>Ble</span>ach</p>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star"></i>
+                        <i class="fa fa-star-o"></i>  
+                    </div>
+                </div>
+        </section>
+        <section id="con3">
+            <div class="h"><p>Main<span> Characters.</span></p> </div>
+            <hr color="white">
+            <div class="con3">
+                <div class="box1">
+                    <img src="12.jpg">
+                    <p>Karkrot<span>(Goku)</span></p>
+                </div>
+                <div class="box1">
+                    <img src="14.jpg">
+                    <p>Nar<span>uto</span></p>
+                </div>
+                <div class="box1">
+                    <img src="13.jpg">
+                    <p>Monkey D<span> Luffy</span></p>
+                </div>
+                <div class="box1">
+                    <img src="16.jpg">
+                    <p>Yuta<span> Okotsu</span></p>
+                </div>
+                <div class="box1">
+                    <img src="15.jpg">
+                    <p>Tanjiro<span> Kamado</span></p>
+                </div>
+                <div class="box1">
+                    <img src="17.jpg">
+                    <p>Ichigo<span> Kurosaki</span></p>
+                </div>
+                </div>
+                <div class="input">
+                    <form>
+                        <button type="submit" class="btn" id="id">Mo<span>re</span></button>
+                    </form>
+                </div>
+            </section>
+            <section id="con4">
+            <div class="h"><p>Your <span>Thought's.</span></p> </div>
+            <hr color="white">
+            <div class="con4">
+                <div class="video">
+                    <video autoplay loop muted src="video.mp4" width="100%" height="450" autoplay>
+                    </video>
+                </div>
+                <div class="form">
+                    <h3>What's Your Thought's<br><span>On Anime</span></h3>
+                    <input type="text" placeholder="Your Anime"><br>
+                    <input type="text" placeholder="Favourite Anime Character"><br>
+                    <input type="text" Placeholder="Describe Your Fav Anime"><br>
+                    <button type="submit" class="btn2">Sub<span>mit</span></button>
+                </div>
+                    </div>
+                 </section>
+                 <!------------------footer------------------>
+                 <hr color="red" class="hred">
+                 <div class="row">
+                    <p class="fot">Copyright@2024 by,<span>Jenil Mota</p></span>
+                 </div>
+            </div>
+    </body>
+</html>
